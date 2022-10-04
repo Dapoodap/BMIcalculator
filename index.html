@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1440px, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon (1).ico" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="judul">
+            <h1>Check Your BMI</h1>
+            <p>Enter your weight and height below to check your bmi result</p>
+        </div>
+        <hr id="line1">
+        <hr id="line2`">
+        <form id="form" method="post">
+            <p>Put your weight in here (KG)</p>
+            <input id="weight" type="number" placeholder="your weight in KG">
+            <p>Put your height in here (CM)</p>
+            <input id="height" type="number" placeholder="your tall in CM">
+            <button type="submit" id="btn">Calculate BMI</button>
+        </form>
+        <div class="hasil">
+            <h1>Hasilnya :</h1>
+            <h3 id="keterangan"></h3>
+            <div class="circle">
+                <h2 id="hasil"></h2>
+            </div>
+        </div>
+        <div class="keterangan">
+            <p id="desc"></p>
+        </div>
+        <div class="footer">
+            <p>Made with &hearts; by Daffa Radhitya </p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
