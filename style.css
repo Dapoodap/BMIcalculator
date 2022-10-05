@@ -41,10 +41,11 @@ body {
   background-color: black;
 }
 .container {
-  position: relative;
   border-radius: 50px;
+  background: linear-gradient(315deg, #aef4ea, #93cdc5);
+  box-shadow: -19px -19px 38px #74a29b, 19px 19px 38px #d2ffff;
+  position: relative;
   color: rgb(31, 29, 29);
-  background-color: #a3e4db;
   width: 600px;
   height: fit-content;
   margin: auto;
@@ -103,7 +104,7 @@ form > input:focus {
 .hasil > h3 {
   margin-bottom: 20px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 700; 
 }
 .circle {
   margin: auto;
@@ -124,7 +125,7 @@ form > input:focus {
 }
 .footer {
   position: absolute;
-  width: 87.5vh;
+  min-width: 36rem;
   bottom: 0;
   background-color: #1c6dd0;
   padding: 10px;

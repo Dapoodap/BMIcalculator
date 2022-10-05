@@ -5,6 +5,13 @@ let text = document.getElementById("hasil")
 let ket = document.getElementById("keterangan")
 let desc = document.getElementById("desc")
 
+function isEmpty() {
+    if (height.value === '' || weight.value === '') {
+        return true
+    } else {
+        return false
+    }
+}
 function keterangan(angka) {
     if (angka < 18.5) {
         ket.innerText = "Underweight "
@@ -22,11 +29,15 @@ function keterangan(angka) {
 }
 form.addEventListener('submit', (eve) => {
     eve.preventDefault()
-    height.value = (height.value * 0.01).toFixed(2)
-    let BMI = (weight.value / (height.value * height.value)).toFixed(1)
-    text.innerText = BMI
-    keterangan(BMI)
-    desc.innerHTML = "<p>Your BMI is <strong>" + BMI + "</strong> which mean you <strong>" + ket.textContent + "</strong></p>"
-    height.value = ""
-    weight.value = ""
+    if (isEmpty()) {
+        alert("Fill your weight and height first")
+    } else {
+        height.value = (height.value * 0.01).toFixed(2)
+        let BMI = (weight.value / (height.value * height.value)).toFixed(1)
+        text.innerText = BMI
+        keterangan(BMI)
+        desc.innerHTML = "<p>Your BMI is <strong>" + BMI + "</strong> which mean you <strong>" + ket.textContent + "</strong></p>"
+        height.value = ""
+        weight.value = ""
+    }
 })  
